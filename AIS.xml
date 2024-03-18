@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V18" />
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="Float_Input" Datatype="Int" />
+    <Member Name="Hi_Lmt" Datatype="Real" />
+    <Member Name="Low_Lmt" Datatype="Real" />
+    <Member Name="K1" Datatype="Real" />
+    <Member Name="K2" Datatype="Real" />
+  </Section>
+  <Section Name="Output">
+    <Member Name="Out_Scale" Datatype="Real" />
+  </Section>
+  <Section Name="InOut" />
+  <Section Name="Temp">
+    <Member Name="Real_1" Datatype="Real" />
+    <Member Name="Real_2" Datatype="Real" />
+    <Member Name="Real_3" Datatype="Real" />
+    <Member Name="Real_4" Datatype="Real" />
+    <Member Name="Float_Real_IN" Datatype="Real" />
+  </Section>
+  <Section Name="Constant" />
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Void" />
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>AIS</Name>
+      <Namespace />
+      <Number>13</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="Float_Input" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="Float_Real_IN" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="Float_Real_IN" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="K1" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="25">
+      <Symbol>
+        <Component Name="Real_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="26">
+      <Symbol>
+        <Component Name="K2" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="27">
+      <Symbol>
+        <Component Name="K1" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="28">
+      <Symbol>
+        <Component Name="Real_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
+      <Symbol>
+        <Component Name="Real_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="30">
+      <Symbol>
+        <Component Name="Real_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="31">
+      <Symbol>
+        <Component Name="Real_3" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="32">
+      <Symbol>
+        <Component Name="Hi_Lmt" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="33">
+      <Symbol>
+        <Component Name="Low_Lmt" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="34">
+      <Symbol>
+        <Component Name="Real_4" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="35">
+      <Symbol>
+        <Component Name="Real_3" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="36">
+      <Symbol>
+        <Component Name="Real_4" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="37">
+      <Symbol>
+        <Component Name="Real_4" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="38">
+      <Symbol>
+        <Component Name="Real_4" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="39">
+      <Symbol>
+        <Component Name="Low_Lmt" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="40">
+      <Symbol>
+        <Component Name="Real_4" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="41">
+      <Symbol>
+        <Component Name="Real_4" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="42">
+      <Symbol>
+        <Component Name="Out_Scale" />
+      </Symbol>
+    </Access>
+    <Part Name="Convert" UId="43" DisabledENO="true">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+      <TemplateValue Name="DestType" Type="Type">Real</TemplateValue>
+    </Part>
+    <Part Name="Sub" UId="44" DisabledENO="true">
+      <AutomaticTyped Name="SrcType" />
+    </Part>
+    <Part Name="Sub" UId="45" DisabledENO="true">
+      <AutomaticTyped Name="SrcType" />
+    </Part>
+    <Part Name="Div" UId="46" DisabledENO="true">
+      <AutomaticTyped Name="SrcType" />
+    </Part>
+    <Part Name="Sub" UId="47" DisabledENO="true">
+      <AutomaticTyped Name="SrcType" />
+    </Part>
+    <Part Name="Mul" UId="48" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+      <AutomaticTyped Name="SrcType" />
+    </Part>
+    <Part Name="Add" UId="49" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+      <AutomaticTyped Name="SrcType" />
+    </Part>
+    <Part Name="Move" UId="50" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="51">
+      <Powerrail />
+      <NameCon UId="43" Name="en" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="21" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="53">
+      <NameCon UId="43" Name="eno" />
+      <NameCon UId="44" Name="en" />
+    </Wire>
+    <Wire UId="54">
+      <NameCon UId="43" Name="out" />
+      <IdentCon UId="22" />
+    </Wire>
+    <Wire UId="55">
+      <IdentCon UId="23" />
+      <NameCon UId="44" Name="in1" />
+    </Wire>
+    <Wire UId="56">
+      <IdentCon UId="24" />
+      <NameCon UId="44" Name="in2" />
+    </Wire>
+    <Wire UId="57">
+      <NameCon UId="44" Name="eno" />
+      <NameCon UId="45" Name="en" />
+    </Wire>
+    <Wire UId="58">
+      <NameCon UId="44" Name="out" />
+      <IdentCon UId="25" />
+    </Wire>
+    <Wire UId="59">
+      <IdentCon UId="26" />
+      <NameCon UId="45" Name="in1" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="27" />
+      <NameCon UId="45" Name="in2" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="45" Name="eno" />
+      <NameCon UId="46" Name="en" />
+    </Wire>
+    <Wire UId="62">
+      <NameCon UId="45" Name="out" />
+      <IdentCon UId="28" />
+    </Wire>
+    <Wire UId="63">
+      <IdentCon UId="29" />
+      <NameCon UId="46" Name="in1" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="30" />
+      <NameCon UId="46" Name="in2" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="46" Name="eno" />
+      <NameCon UId="47" Name="en" />
+    </Wire>
+    <Wire UId="66">
+      <NameCon UId="46" Name="out" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="67">
+      <IdentCon UId="32" />
+      <NameCon UId="47" Name="in1" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="33" />
+      <NameCon UId="47" Name="in2" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="47" Name="eno" />
+      <NameCon UId="48" Name="en" />
+    </Wire>
+    <Wire UId="70">
+      <NameCon UId="47" Name="out" />
+      <IdentCon UId="34" />
+    </Wire>
+    <Wire UId="71">
+      <IdentCon UId="35" />
+      <NameCon UId="48" Name="in1" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="36" />
+      <NameCon UId="48" Name="in2" />
+    </Wire>
+    <Wire UId="73">
+      <NameCon UId="48" Name="eno" />
+      <NameCon UId="49" Name="en" />
+    </Wire>
+    <Wire UId="74">
+      <NameCon UId="48" Name="out" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="75">
+      <IdentCon UId="38" />
+      <NameCon UId="49" Name="in1" />
+    </Wire>
+    <Wire UId="76">
+      <IdentCon UId="39" />
+      <NameCon UId="49" Name="in2" />
+    </Wire>
+    <Wire UId="77">
+      <NameCon UId="49" Name="eno" />
+      <NameCon UId="50" Name="en" />
+    </Wire>
+    <Wire UId="78">
+      <NameCon UId="49" Name="out" />
+      <IdentCon UId="40" />
+    </Wire>
+    <Wire UId="79">
+      <IdentCon UId="41" />
+      <NameCon UId="50" Name="in" />
+    </Wire>
+    <Wire UId="80">
+      <NameCon UId="50" Name="out1" />
+      <IdentCon UId="42" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3" /></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="10" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="12" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="13" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>
